@@ -1,0 +1,11 @@
+version: '2.1'
+
+services:
+  app:
+    build: .
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ./dist/shopping-cart/.:/usr/share/nginx/html
+    ports:
+      - 80:80
